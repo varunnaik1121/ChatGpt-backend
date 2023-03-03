@@ -26,7 +26,7 @@ app.post('/', async (req, res) => {
     const userInput = req.body.userInput;
     console.log({ userInput });
     const response = await openai.createCompletion({
-      model: 'code-davinci-002',
+      model: 'text-davinci-002',
       prompt: `${userInput}`,
       temperature: 0.2,
       max_tokens: 3000,
