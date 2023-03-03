@@ -26,10 +26,10 @@ app.post('/', async (req, res) => {
     const userInput = req.body.userInput;
     console.log({ userInput });
     const response = await openai.createCompletion({
-      model: 'text-davinci-003',
+      model: 'gpt-3.5-turbo',
       prompt: `${userInput}`,
       temperature: 0.2,
-      max_tokens: 3000,
+      max_tokens: 4000,
       top_p: 1,
       frequency_penalty: 0.5,
       presence_penalty: 0,
